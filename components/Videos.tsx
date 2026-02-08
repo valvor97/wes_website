@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Videos: React.FC = () => {
   return (
-    <section className="py-32 bg-black border-y border-neutral-900 relative">
+    <section id="videos" className="py-32 bg-black border-y border-neutral-900 relative">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
             <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">

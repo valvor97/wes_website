@@ -30,7 +30,7 @@ const services = [
 ];
 
 const Services: React.FC = () => {
-  const [activeImage, setActiveImage] = useState<string>(services[0].image);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   return (
     <section className="py-32 bg-[#050505] relative overflow-hidden">
@@ -40,27 +40,30 @@ const Services: React.FC = () => {
         <div className="flex flex-col lg:flex-row gap-20">
             {/* List */}
             <div className="w-full lg:w-1/2 flex flex-col">
-                {services.map((service) => (
+                {services.map((service, index) => {
+                  const isActive = index === activeIndex;
+                  return (
                     <div 
                         key={service.id}
                         role="button"
                         tabIndex={0}
-                        className="group border-t border-neutral-900 py-12 cursor-pointer transition-all duration-200 hover:pl-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-inset"
-                        onMouseEnter={() => setActiveImage(service.image)}
-                        onFocus={() => setActiveImage(service.image)}
-                        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActiveImage(service.image); } }}
+                        className={`group border-t border-neutral-900 py-12 cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-inset ${isActive ? 'pl-4' : 'hover:pl-4'}`}
+                        onMouseEnter={() => setActiveIndex(index)}
+                        onFocus={() => setActiveIndex(index)}
+                        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActiveIndex(index); } }}
                     >
                         <div className="flex items-baseline justify-between mb-2">
-                             <h2 className="text-3xl md:text-5xl font-bold text-neutral-500 group-hover:text-white transition-colors duration-300">
+                             <h2 className={`text-3xl md:text-5xl font-bold transition-colors duration-200 ${isActive ? 'text-white' : 'text-neutral-500 group-hover:text-white'}`}>
                                 {service.title}
                             </h2>
-                            <span className="text-sm font-mono text-neutral-600 group-hover:text-[#bf953f]">{service.id}</span>
+                            <span className={`text-sm font-mono transition-colors duration-200 ${isActive ? 'text-[#bf953f]' : 'text-neutral-600 group-hover:text-[#bf953f]'}`}>{service.id}</span>
                         </div>
-                        <p className="text-neutral-600 group-hover:text-neutral-400 transition-colors duration-300 max-w-sm font-light">
+                        <p className={`max-w-sm font-light transition-colors duration-200 ${isActive ? 'text-neutral-400' : 'text-neutral-600 group-hover:text-neutral-400'}`}>
                             {service.desc}
                         </p>
                     </div>
-                ))}
+                  );
+                })}
                 <div className="border-t border-neutral-900" />
             </div>
 
@@ -69,8 +72,8 @@ const Services: React.FC = () => {
                 <div className="relative w-full h-full overflow-hidden rounded-sm bg-neutral-900">
                     <AnimatePresence mode="wait">
                         <motion.img
-                            key={activeImage}
-                            src={activeImage}
+                            key={services[activeIndex].image}
+                            src={services[activeIndex].image}
                             initial={{ opacity: 0, scale: 1.1 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0 }}

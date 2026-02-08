@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Logos from './components/Logos';
 import Benefits from './components/Benefits';
@@ -17,6 +18,7 @@ const App: React.FC = () => {
       {/* Global Noise Texture */}
       <div className="noise-overlay" />
 
+      <Navbar />
       <Hero />
       
       {/* 
