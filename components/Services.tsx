@@ -7,25 +7,25 @@ const services = [
     id: "01",
     title: "Live Performance",
     desc: "Jazz clubs, festivals, and corporate atmosphere.",
-    image: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=2664&auto=format&fit=crop"
+    image: "/images/service-live.jpg"
   },
   {
     id: "02",
     title: "Drum Instruction",
     desc: "Technical mastery for all skill levels.",
-    image: "https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?q=80&w=2070&auto=format&fit=crop"
+    image: "/images/service-instruction.jpg"
   },
   {
     id: "03",
     title: "Studio Session",
     desc: "Precision recording for albums and film scores.",
-    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop"
+    image: "/images/service-studio.jpg"
   },
   {
     id: "04",
     title: "Transcription",
     desc: "Professional charting and notation services.",
-    image: "https://images.unsplash.com/photo-1507838153414-b4b713384ebd?q=80&w=2070&auto=format&fit=crop"
+    image: "/images/service-transcription.jpg"
   }
 ];
 

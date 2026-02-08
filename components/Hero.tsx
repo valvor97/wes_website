@@ -46,29 +46,27 @@ const Hero: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* 
-        Slide 2: Legacy
-        Futuristic minimal layout.
-      */}
+      {/* Slide 2: Legacy */}
       <div className="relative z-10 min-h-[90vh] flex flex-col items-center justify-center px-6 bg-gradient-to-b from-transparent to-[#050505]">
         <motion.div 
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10%" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="max-w-6xl w-full"
+          className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-12 md:gap-24"
         >
-            <div className="border-l border-[#bf953f]/30 pl-8 md:pl-16 py-4">
-              <h2 className="text-6xl md:text-9xl font-bold text-white mb-6 leading-[0.9] tracking-tight">
-                LEGACY <br/>
-                <span className="text-gradient-gold italic pr-4">IN EVERY</span> <br/>
-                STROKE.
-              </h2>
-            </div>
-            
-            <div className="flex flex-col md:flex-row justify-end mt-12 md:mt-24 gap-12">
-               <div className="max-w-md">
-                 <p className="text-lg md:text-xl text-neutral-400 font-light leading-relaxed">
+            {/* Text Content */}
+            <div className="w-full md:w-1/2">
+              <div className="border-l border-[#bf953f]/30 pl-8 md:pl-16 py-4">
+                <h2 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-[0.9] tracking-tight">
+                  LEGACY <br/>
+                  <span className="text-gradient-gold italic pr-4">IN EVERY</span> <br/>
+                  STROKE.
+                </h2>
+              </div>
+              
+              <div className="pl-8 md:pl-16">
+                 <p className="text-lg md:text-xl text-neutral-400 font-light leading-relaxed max-w-md">
                     A third-generation drummer with Hall of Fame roots. 
                     Merging jazz tradition with modern precision for events that demand excellence.
                  </p>
@@ -78,7 +76,20 @@ const Hero: React.FC = () => {
                 >
                   Start The Conversation
                 </a>
-               </div>
+              </div>
+            </div>
+
+            {/* Image Composition */}
+            <div className="w-full md:w-1/2 relative">
+              <div className="relative aspect-[3/4] overflow-hidden grayscale contrast-125 border-l border-[#bf953f]/20 pl-4 pt-4">
+                 <img 
+                  src="/images/legacy-drummer.png" 
+                  alt="Wesley Anderson playing drums" 
+                  className="w-full h-full object-cover opacity-80"
+                />
+                {/* Overlay gradient for blending */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60" />
+              </div>
             </div>
         </motion.div>
       </div>

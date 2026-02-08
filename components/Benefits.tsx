@@ -17,10 +17,10 @@ const Benefits: React.FC = () => {
             <div className="max-w-2xl">
                 <h2 className="text-4xl md:text-7xl font-bold text-white leading-[0.9] mb-8">
                     NOT YOUR <br/> 
-                    <span className="text-neutral-700">AVERAGE</span> DRUMMER.
+                    <span className="text-neutral-700 italic">ORDINARY</span> DRUMMER.
                 </h2>
                 <p className="text-neutral-400 text-lg font-light max-w-lg">
-                    Precision, style, and a deep pocket. Wesley brings a level of professionalism that elevates the entire bandstand.
+                    Rooted in tradition, shaped by the moment. A drummer who listens first, plays second.
                 </p>
             </div>
             
@@ -38,7 +38,7 @@ const Benefits: React.FC = () => {
         {/* Glass Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
-            { title: "Energy", icon: <Zap/>, desc: "When Wes locks in, every heart finds the beat." },
+            { title: "Pocket", icon: <Zap/>, desc: "When Wes locks in, every heart finds the beat." },
             { title: "Groove", icon: <Music/>, desc: "Steady, deep and makes the whole floor feel it." },
             { title: "Range", icon: <Layers/>, desc: "Jazz, rock, country, pop, fusion, folk." },
             { title: "Style", icon: <User/>, desc: "From sharp chops to fine shoes, always professional." }
