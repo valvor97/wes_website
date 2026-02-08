@@ -10,7 +10,7 @@ const About: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-16 lg:gap-32">
           
           {/* Image Composition */}
           <motion.div 
@@ -18,9 +18,9 @@ const About: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.65, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="w-full lg:w-1/2 relative"
+            className="w-full sm:w-2/3 lg:w-1/2 relative"
           >
-            <div className="relative z-10 aspect-[3/4] overflow-hidden grayscale contrast-125">
+            <div className="relative z-10 aspect-[4/3] sm:aspect-square lg:aspect-[3/4] overflow-hidden grayscale contrast-125">
               <img 
                 src="/images/wes-bio.png" 
                 alt="Wesley Anderson, Vancouver drummer, in formal performance setting"

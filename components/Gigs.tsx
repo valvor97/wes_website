@@ -13,19 +13,19 @@ const gigs = [
 const Gigs: React.FC = () => {
   return (
     <section id="gigs" className="py-20 sm:py-32 bg-[#050505] relative z-20" aria-labelledby="gigs-heading">
-      <div className="container mx-auto px-6 max-w-7xl">
+      <div className="container mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="flex flex-col md:flex-row justify-between items-end mb-12 sm:mb-20"
+          className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 sm:mb-20"
         >
           <h2 id="gigs-heading" className="text-4xl sm:text-6xl md:text-8xl font-bold text-white leading-[0.85] tracking-tighter">
             LIVE <br/>
             <span className="text-gradient-gold">DATES</span>
           </h2>
-          <p className="text-neutral-500 font-mono text-sm uppercase tracking-widest mt-8 md:mt-0">
+          <p className="text-neutral-500 font-mono text-sm uppercase tracking-widest mt-8 lg:mt-0">
             See Wes Live in Concert
           </p>
         </motion.div>
@@ -42,7 +42,7 @@ const Gigs: React.FC = () => {
               transition={{ duration: 0.65, delay: index * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="group relative border-t border-neutral-900 py-10 hover:bg-neutral-900/30 transition-colors duration-200 cursor-pointer min-h-[44px]"
             >
-              <div className="grid grid-cols-1 md:grid-cols-[100px_90px_2fr_minmax(140px,1fr)_48px] md:items-center gap-4 md:gap-8 px-4">
+              <div className="grid grid-cols-1 lg:grid-cols-[100px_90px_2fr_minmax(140px,1fr)_48px] lg:items-center gap-4 lg:gap-8">
                 
                 {/* Date */}
                 <div>
@@ -60,21 +60,21 @@ const Gigs: React.FC = () => {
 
                 {/* Venue */}
                 <div>
-                  <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-neutral-300 group-hover:text-white group-hover:tracking-wide transition-all duration-200 uppercase break-words">
+                  <h3 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-neutral-300 group-hover:text-white group-hover:tracking-wide transition-all duration-200 uppercase break-words">
                     {gig.venue}
                   </h3>
-                  <p className="md:hidden text-neutral-500 text-sm mt-2">{gig.location}</p>
+                  <p className="lg:hidden text-neutral-500 text-sm mt-2">{gig.location}</p>
                 </div>
 
                 {/* Location */}
-                <div className="hidden md:block">
+                <div className="hidden lg:block">
                   <span className="text-neutral-500 text-sm font-light group-hover:text-neutral-300 transition-colors whitespace-nowrap">
                     {gig.location}
                   </span>
                 </div>
 
                 {/* Action */}
-                <div className="hidden md:flex justify-end" aria-hidden="true">
+                <div className="hidden lg:flex justify-end" aria-hidden="true">
                   <div className="w-12 h-12 min-w-[44px] min-h-[44px] rounded-full border border-neutral-800 flex items-center justify-center group-hover:border-[#bf953f] group-hover:bg-[#bf953f] transition-all duration-200">
                     <ArrowUpRight className="text-neutral-500 group-hover:text-black w-5 h-5 transition-colors" />
                   </div>

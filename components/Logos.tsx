@@ -13,7 +13,7 @@ const venues = [
 
 const Logos: React.FC = () => {
   return (
-    <section className="py-8 sm:py-12 bg-[#050505] border-y border-neutral-900/50 overflow-hidden relative z-20" aria-label="Venues and stages where Wesley has performed">
+    <section className="py-10 sm:py-12 px-6 bg-[#050505] border-y border-neutral-900/50 overflow-hidden relative z-20" aria-label="Venues and stages where Wesley has performed">
       <div className="flex whitespace-nowrap" aria-hidden="true">
         <motion.div 
             className="flex gap-20 items-center"

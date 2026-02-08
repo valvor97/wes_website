@@ -11,7 +11,7 @@ const Videos: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="flex flex-col md:flex-row justify-between items-end mb-12 sm:mb-16"
+          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 sm:mb-16"
         >
             <h2 id="videos-heading" className="text-3xl sm:text-4xl md:text-6xl font-bold text-white tracking-tight">
                 VISUAL <span className="text-neutral-700">DIARIES</span>
@@ -55,8 +55,8 @@ const Videos: React.FC = () => {
                         <Play className="w-8 h-8 text-white ml-1 group-hover:fill-black group-hover:text-black transition-colors" />
                     </div>
                 </div>
-                <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black to-transparent pointer-events-none">
-                    <h3 className="text-3xl font-bold text-white mb-2 font-syne">Strange Fellow - Reaper</h3>
+                <div className="absolute bottom-0 left-0 p-6 sm:p-8 w-full bg-gradient-to-t from-black to-transparent pointer-events-none">
+                    <h3 className="text-xl sm:text-3xl font-bold text-white mb-2 font-syne">Strange Fellow - Reaper</h3>
                     <p className="font-mono text-[#bf953f] text-xs">MUSIC VIDEO</p>
                 </div>
             </a>
@@ -83,7 +83,7 @@ const Videos: React.FC = () => {
                     </div>
                  </div>
                  <div className="absolute bottom-6 left-6">
-                    <h3 className="text-xl font-bold text-white">Adam Cebula - Many Nights</h3>
+                    <h3 className="text-base sm:text-xl font-bold text-white">Adam Cebula - Many Nights</h3>
                     <p className="font-mono text-[#bf953f] text-xs mt-1">STUDIO WORK</p>
                  </div>
             </a>
@@ -104,7 +104,7 @@ const Videos: React.FC = () => {
                     </div>
                  </div>
                  <div className="absolute bottom-6 left-6">
-                    <h3 className="text-xl font-bold text-white">Transcription Breakdown</h3>
+                    <h3 className="text-base sm:text-xl font-bold text-white">Transcription Breakdown</h3>
                  </div>
             </div>
         </motion.div>

@@ -5,7 +5,7 @@ import { Quote } from 'lucide-react';
 const Testimonials: React.FC = () => {
   return (
     <section id="testimonials" className="py-20 sm:py-32 bg-[#050505] relative" aria-labelledby="testimonials-heading">
-      <div className="container mx-auto px-6 max-w-6xl">
+      <div className="container mx-auto px-6">
         <motion.h2 
           id="testimonials-heading" 
           initial={{ opacity: 0, y: 24 }}

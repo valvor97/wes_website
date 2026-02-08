@@ -64,7 +64,7 @@ const Services: React.FC = () => {
                         tabIndex={0}
                         aria-pressed={isActive}
                         aria-label={`${service.title}: ${service.desc}`}
-                        className={`group border-t border-neutral-900 py-10 sm:py-12 cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-inset min-h-[44px] ${isActive ? 'pl-4' : 'hover:pl-4'}`}
+                        className={`group border-t border-neutral-900 py-10 sm:py-12 cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-inset min-h-[44px] ${isActive ? 'border-l-2 border-l-[#bf953f] pl-4' : 'border-l-2 border-l-transparent pl-4'}`}
                         onMouseEnter={() => setActiveIndex(index)}
                         onFocus={() => setActiveIndex(index)}
                         onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActiveIndex(index); } }}
