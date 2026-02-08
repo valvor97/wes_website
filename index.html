@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wesley Anderson | Vancouver Drummer</title>
-    <meta name="description" content="Professional drummer and music educator based in Vancouver, BC. Third-generation musician specializing in jazz, corporate events, and studio sessions." />
+    <title>Wesley Anderson | Vancouver Drummer & Educator</title>
+    <meta name="description" content="Wesley Anderson is a Vancouver drummer and educator with Hall of Fame roots. Jazz, rock, country, folk. Live performance, studio sessions, drum instruction. Book for events in Vancouver & Fraser Valley." />
+    <meta name="theme-color" content="#050505" />
+    <meta property="og:title" content="Wesley Anderson | Vancouver Drummer & Educator" />
+    <meta property="og:description" content="Professional drummer and music educator. Jazz, corporate events, studio sessions. Vancouver & Fraser Valley." />
+    <meta property="og:type" content="website" />
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Fonts: Syne (Futuristic/Art) & Inter (Clean/Tech) -->
@@ -21,6 +25,7 @@
         background-color: var(--color-bg);
         color: var(--color-text);
         font-family: 'Inter', sans-serif;
+        font-size: 16px;
         -webkit-font-smoothing: antialiased;
         overflow-x: hidden;
       }
@@ -37,7 +42,7 @@
         width: 100%;
         height: 100%;
         pointer-events: none;
-        z-index: 9999;
+        z-index: 40;
         opacity: 0.05;
         background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
       }
@@ -85,6 +90,25 @@
       a:focus-visible, button:focus-visible, [role="button"]:focus-visible {
         outline: 2px solid #bf953f;
         outline-offset: 2px;
+      }
+
+      /* Card with golden border on hover */
+      .glow-card {
+        position: relative;
+        border-radius: 6px;
+      }
+
+      .glow-card-inner {
+        position: relative;
+        background: #0a0a0a;
+        border-radius: 6px;
+        height: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: border-color 0.3s ease;
+      }
+
+      .glow-card:hover .glow-card-inner {
+        border-color: #bf953f;
       }
     </style>
   <script type="importmap">

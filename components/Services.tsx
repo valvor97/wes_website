@@ -33,13 +33,28 @@ const Services: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="py-32 bg-[#050505] relative overflow-hidden">
+    <section id="services" className="py-20 sm:py-32 bg-[#050505] relative overflow-hidden" aria-labelledby="services-heading">
       <div className="container mx-auto px-6 relative z-10">
-        <h3 className="text-[#bf953f] uppercase tracking-[0.3em] text-xs font-bold mb-16">Expertise</h3>
+        <motion.h2 
+          id="services-heading" 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="text-[#bf953f] uppercase tracking-[0.3em] text-xs font-bold mb-12 sm:mb-16"
+        >
+          Expertise
+        </motion.h2>
 
         <div className="flex flex-col lg:flex-row gap-20">
             {/* List */}
-            <div className="w-full lg:w-1/2 flex flex-col">
+            <motion.div 
+              className="w-full lg:w-1/2 flex flex-col"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
                 {services.map((service, index) => {
                   const isActive = index === activeIndex;
                   return (
@@ -47,15 +62,17 @@ const Services: React.FC = () => {
                         key={service.id}
                         role="button"
                         tabIndex={0}
-                        className={`group border-t border-neutral-900 py-12 cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-inset ${isActive ? 'pl-4' : 'hover:pl-4'}`}
+                        aria-pressed={isActive}
+                        aria-label={`${service.title}: ${service.desc}`}
+                        className={`group border-t border-neutral-900 py-10 sm:py-12 cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-inset min-h-[44px] ${isActive ? 'pl-4' : 'hover:pl-4'}`}
                         onMouseEnter={() => setActiveIndex(index)}
                         onFocus={() => setActiveIndex(index)}
                         onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActiveIndex(index); } }}
                     >
                         <div className="flex items-baseline justify-between mb-2">
-                             <h2 className={`text-3xl md:text-5xl font-bold transition-colors duration-200 ${isActive ? 'text-white' : 'text-neutral-500 group-hover:text-white'}`}>
+                             <h3 className={`text-2xl sm:text-3xl md:text-5xl font-bold transition-colors duration-200 ${isActive ? 'text-white' : 'text-neutral-500 group-hover:text-white'}`}>
                                 {service.title}
-                            </h2>
+                            </h3>
                             <span className={`text-sm font-mono transition-colors duration-200 ${isActive ? 'text-[#bf953f]' : 'text-neutral-600 group-hover:text-[#bf953f]'}`}>{service.id}</span>
                         </div>
                         <p className={`max-w-sm font-light transition-colors duration-200 ${isActive ? 'text-neutral-400' : 'text-neutral-600 group-hover:text-neutral-400'}`}>
@@ -65,7 +82,7 @@ const Services: React.FC = () => {
                   );
                 })}
                 <div className="border-t border-neutral-900" />
-            </div>
+            </motion.div>
 
             {/* Image Reveal Area */}
             <div className="hidden lg:block w-1/2 h-[600px] sticky top-32">
@@ -74,6 +91,10 @@ const Services: React.FC = () => {
                         <motion.img
                             key={services[activeIndex].image}
                             src={services[activeIndex].image}
+                            alt={`${services[activeIndex].title} - ${services[activeIndex].desc}`}
+                            loading="lazy"
+                            width={600}
+                            height={600}
                             initial={{ opacity: 0, scale: 1.1 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0 }}

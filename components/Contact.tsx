@@ -1,18 +1,29 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-40 bg-[#050505] relative overflow-hidden border-t border-neutral-900">
+    <section id="contact" className="py-20 sm:py-40 bg-[#050505] relative overflow-hidden border-t border-neutral-900" aria-labelledby="contact-heading">
       <div className="container mx-auto px-6 relative z-10 text-center">
-        <h2 className="text-[10vw] font-bold text-white leading-none mb-4 mix-blend-exclusion">
-          LET'S WORK
-        </h2>
-        <h2 className="text-[10vw] font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#bf953f] to-[#fcf6ba] leading-none mb-16">
-          TOGETHER
-        </h2>
+        <motion.h2 
+          id="contact-heading" 
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="text-[8vw] sm:text-[10vw] font-bold text-white leading-none mb-16 mix-blend-exclusion"
+        >
+          LET'S WORK <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#bf953f] to-[#fcf6ba]">TOGETHER</span>
+        </motion.h2>
         
-        <div className="flex flex-col items-center">
-            <p className="text-xl text-neutral-400 mb-12 font-light tracking-wide">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="flex flex-col items-center"
+        >
+            <p className="text-base sm:text-xl text-neutral-400 mb-10 sm:mb-12 font-light tracking-wide max-w-md mx-auto px-4">
             Available for bookings in Vancouver & Fraser Valley
             </p>
             
@@ -27,7 +38,7 @@ const Contact: React.FC = () => {
             <span className="absolute flex items-center justify-center w-full h-full text-[#bf953f] transition-all duration-300 transform group-hover:translate-x-full ease">Book Wes Now</span>
             <span className="relative invisible">Book Wes Now</span>
             </a>
-        </div>
+        </motion.div>
         
       </div>
     </section>

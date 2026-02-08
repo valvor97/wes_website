@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { id: 'home', label: 'Home', side: 'left' },
     { id: 'videos', label: 'Portfolio', side: 'left' },
-    { id: 'about', label: 'Bio', side: 'right' },
+    { id: 'about', label: 'Biography', side: 'right' },
     { id: 'contact', label: 'Get In Touch', side: 'right' },
   ];
 
