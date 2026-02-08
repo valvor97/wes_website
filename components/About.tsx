@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const About: React.FC = () => {
   return (
-    <section className="py-40 bg-[#050505] relative overflow-hidden">
+    <section id="about" className="py-40 bg-[#050505] relative overflow-hidden">
       {/* Background typographic decoration */}
       <div className="absolute top-20 right-0 text-[20vw] font-bold text-white/[0.02] leading-none pointer-events-none select-none font-syne">
         STORY
@@ -17,17 +17,18 @@ const About: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5 }}
             className="w-full lg:w-1/2 relative"
           >
             <div className="relative z-10 aspect-[3/4] overflow-hidden grayscale contrast-125">
               <img 
                 src="https://images.unsplash.com/photo-1524230659092-07f99a75c013?q=80&w=1470&auto=format&fit=crop" 
-                alt="Wesley Anderson Portrait" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000 ease-out"
+                alt="Wesley Anderson, professional drummer portrait"
+                loading="lazy" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-out"
               />
               {/* Gold Overlay Effect */}
-              <div className="absolute inset-0 bg-[#bf953f] mix-blend-color opacity-0 hover:opacity-20 transition-opacity duration-700" />
+              <div className="absolute inset-0 bg-[#bf953f] mix-blend-color opacity-0 hover:opacity-20 transition-opacity duration-200" />
             </div>
             
             {/* Decorative Elements */}
@@ -40,7 +41,7 @@ const About: React.FC = () => {
              initial={{ opacity: 0, y: 50 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
-             transition={{ duration: 1, delay: 0.3 }}
+             transition={{ duration: 0.6, delay: 0.15 }}
              className="w-full lg:w-1/2"
           >
             <div className="mb-10">

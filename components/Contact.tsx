@@ -18,7 +18,8 @@ const Contact: React.FC = () => {
             
             <a 
             href="mailto:booking@wesleyanderson.com"
-            className="group relative inline-flex items-center justify-center px-12 py-6 overflow-hidden font-bold text-black transition-transform duration-300 ease-out border-2 border-[#bf953f] rounded-full shadow-md group"
+            className="group relative inline-flex items-center justify-center min-h-[48px] min-w-[160px] px-12 py-6 overflow-hidden font-bold text-black transition-all duration-200 ease-out border-2 border-[#bf953f] rounded-full shadow-md cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]"
+            aria-label="Book Wes - Send email to booking@wesleyanderson.com"
             >
             <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#bf953f] group-hover:translate-x-0 ease">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>

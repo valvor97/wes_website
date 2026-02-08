@@ -43,8 +43,12 @@ const Services: React.FC = () => {
                 {services.map((service) => (
                     <div 
                         key={service.id}
-                        className="group border-t border-neutral-900 py-12 cursor-pointer transition-all duration-300 hover:pl-4"
+                        role="button"
+                        tabIndex={0}
+                        className="group border-t border-neutral-900 py-12 cursor-pointer transition-all duration-200 hover:pl-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-inset"
                         onMouseEnter={() => setActiveImage(service.image)}
+                        onFocus={() => setActiveImage(service.image)}
+                        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActiveImage(service.image); } }}
                     >
                         <div className="flex items-baseline justify-between mb-2">
                              <h2 className="text-3xl md:text-5xl font-bold text-neutral-500 group-hover:text-white transition-colors duration-300">
@@ -70,13 +74,13 @@ const Services: React.FC = () => {
                             initial={{ opacity: 0, scale: 1.1 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.5 }}
+                            transition={{ duration: 0.3 }}
                             className="absolute inset-0 w-full h-full object-cover grayscale opacity-60"
                         />
                     </AnimatePresence>
                     {/* Gold tint overlay */}
                     <div className="absolute inset-0 bg-[#bf953f] mix-blend-overlay opacity-20" />
-                    <div className="absolute bottom-6 right-6 p-4 border border-white/20 backdrop-blur-md">
+                    <div className="absolute bottom-6 right-6 p-4 min-w-[44px] min-h-[44px] flex items-center justify-center border border-white/20 backdrop-blur-md" aria-hidden="true">
                         <ArrowUpRight className="text-white w-6 h-6" />
                     </div>
                 </div>

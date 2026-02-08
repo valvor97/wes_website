@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Facebook, Youtube, Mail } from 'lucide-react';
+import { Instagram, Youtube, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -10,23 +10,23 @@ const Footer: React.FC = () => {
             <div className="max-w-md">
                 <h5 className="text-white font-bold text-xl mb-6">Navigation</h5>
                 <ul className="space-y-4 font-mono text-sm text-neutral-500">
-                    <li><a href="#" className="hover:text-[#bf953f] transition-colors">HOME</a></li>
-                    <li><a href="#" className="hover:text-[#bf953f] transition-colors">ABOUT</a></li>
-                    <li><a href="#" className="hover:text-[#bf953f] transition-colors">GIGS</a></li>
-                    <li><a href="#" className="hover:text-[#bf953f] transition-colors">CONTACT</a></li>
+                    <li><a href="#" className="hover:text-[#bf953f] transition-colors duration-200 cursor-pointer py-2 inline-block">HOME</a></li>
+                    <li><a href="#about" className="hover:text-[#bf953f] transition-colors duration-200 cursor-pointer py-2 inline-block">ABOUT</a></li>
+                    <li><a href="#gigs" className="hover:text-[#bf953f] transition-colors duration-200 cursor-pointer py-2 inline-block">GIGS</a></li>
+                    <li><a href="#contact" className="hover:text-[#bf953f] transition-colors duration-200 cursor-pointer py-2 inline-block">CONTACT</a></li>
                 </ul>
             </div>
 
             <div>
                  <h5 className="text-white font-bold text-xl mb-6">Connect</h5>
                  <div className="flex gap-6">
-                    <a href="#" className="w-12 h-12 rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-black hover:bg-[#bf953f] hover:border-[#bf953f] transition-all duration-300">
+                    <a href="#" className="w-12 h-12 min-w-[44px] min-h-[44px] rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-black hover:bg-[#bf953f] hover:border-[#bf953f] transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]" aria-label="Instagram">
                         <Instagram className="w-5 h-5" />
                     </a>
-                    <a href="#" className="w-12 h-12 rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-black hover:bg-[#bf953f] hover:border-[#bf953f] transition-all duration-300">
+                    <a href="#" className="w-12 h-12 min-w-[44px] min-h-[44px] rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-black hover:bg-[#bf953f] hover:border-[#bf953f] transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]" aria-label="YouTube">
                         <Youtube className="w-5 h-5" />
                     </a>
-                    <a href="mailto:booking@wesleyanderson.com" className="w-12 h-12 rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-black hover:bg-[#bf953f] hover:border-[#bf953f] transition-all duration-300">
+                    <a href="mailto:booking@wesleyanderson.com" className="w-12 h-12 min-w-[44px] min-h-[44px] rounded-full border border-neutral-800 flex items-center justify-center text-neutral-400 hover:text-black hover:bg-[#bf953f] hover:border-[#bf953f] transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]" aria-label="Email">
                         <Mail className="w-5 h-5" />
                     </a>
                  </div>

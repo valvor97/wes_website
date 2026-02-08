@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
         Fixed Background Video
         Stays pinned.
       */}
-      <div className="fixed inset-0 z-0 h-screen w-full pointer-events-none">
+      <div className="fixed inset-0 z-0 min-h-dvh h-screen w-full pointer-events-none">
         <img 
           src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?q=80&w=2070&auto=format&fit=crop" 
           alt="Drummer background" 
@@ -22,11 +22,11 @@ const Hero: React.FC = () => {
         Slide 1: Name 
         Uses new Syne font and gradient gold.
       */}
-      <div className="relative z-10 h-screen w-full flex flex-col items-center justify-center px-4">
+      <div className="relative z-10 min-h-dvh h-screen w-full flex flex-col items-center justify-center px-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }} // Apple-esque ease
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
           <h1 className="text-[12vw] leading-[0.85] font-extrabold uppercase tracking-tighter text-white mix-blend-overlay opacity-80 select-none">
@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
           <div className="mt-12 flex items-center justify-center gap-6">
             <div className="h-[1px] w-12 bg-neutral-700" />
             <p className="text-sm tracking-[0.3em] uppercase text-neutral-400 font-sans">
-              Vancouver, BC
+              Professional Drummer & Educator
             </p>
             <div className="h-[1px] w-12 bg-neutral-700" />
           </div>
@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10%" }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="max-w-6xl w-full"
         >
             <div className="border-l border-[#bf953f]/30 pl-8 md:pl-16 py-4">
@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
                  </p>
                  <a 
                   href="#contact"
-                  className="mt-8 inline-block text-[#bf953f] border-b border-[#bf953f] pb-1 uppercase tracking-widest text-xs font-bold hover:text-white hover:border-white transition-all"
+                  className="mt-8 inline-flex items-center gap-2 min-h-[44px] cursor-pointer text-[#bf953f] border-b border-[#bf953f] pb-1 uppercase tracking-widest text-xs font-bold hover:text-white hover:border-white transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]"
                 >
                   Start The Conversation
                 </a>

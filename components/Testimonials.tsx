@@ -10,9 +10,9 @@ const Testimonials: React.FC = () => {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-10 border border-white/5 bg-white/[0.02] backdrop-blur-sm relative group hover:border-[#bf953f]/30 transition-colors duration-500">
+            <div className="p-10 border border-white/5 bg-white/[0.02] backdrop-blur-sm relative group hover:border-[#bf953f]/30 transition-colors duration-200">
                 <Quote className="w-8 h-8 text-[#bf953f] mb-6 opacity-50" />
-                <p className="text-2xl font-light text-neutral-300 leading-relaxed mb-8">
+                <p className="text-lg md:text-2xl font-light text-neutral-300 leading-relaxed mb-8 max-w-prose">
                     "Wes just gets it. Solid feel, no ego, easy to play with. A true professional."
                 </p>
                 <div className="flex items-center gap-4">
@@ -24,9 +24,9 @@ const Testimonials: React.FC = () => {
                 </div>
             </div>
 
-            <div className="p-10 border border-white/5 bg-white/[0.02] backdrop-blur-sm relative group hover:border-[#bf953f]/30 transition-colors duration-500 mt-0 md:mt-12">
+            <div className="p-10 border border-white/5 bg-white/[0.02] backdrop-blur-sm relative group hover:border-[#bf953f]/30 transition-colors duration-200 mt-0 md:mt-12">
                 <Quote className="w-8 h-8 text-[#bf953f] mb-6 opacity-50" />
-                <p className="text-2xl font-light text-neutral-300 leading-relaxed mb-8">
+                <p className="text-lg md:text-2xl font-light text-neutral-300 leading-relaxed mb-8 max-w-prose">
                     "We hired Wes for a corporate event and he read the room perfectly. Our guests were raving."
                 </p>
                 <div className="flex items-center gap-4">

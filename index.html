@@ -71,6 +71,21 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #bf953f; 
       }
+
+      /* Respect reduced motion preference (UI UX Pro Max) */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+
+      /* Focus states for keyboard navigation */
+      a:focus-visible, button:focus-visible, [role="button"]:focus-visible {
+        outline: 2px solid #bf953f;
+        outline-offset: 2px;
+      }
     </style>
   <script type="importmap">
 {

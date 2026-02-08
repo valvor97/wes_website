@@ -30,7 +30,7 @@ const Process: React.FC = () => {
           
           {steps.map((step, index) => (
             <div key={index} className="relative z-10 group">
-                <div className="text-9xl font-bold text-neutral-800 font-syne leading-none mb-6 group-hover:text-gradient-gold transition-all duration-500">
+                <div className="text-9xl font-bold text-neutral-800 font-syne leading-none mb-6 group-hover:text-gradient-gold transition-all duration-200">
                     {step.num}
                 </div>
                 <h4 className="text-3xl font-bold text-white mb-4">{step.title}</h4>

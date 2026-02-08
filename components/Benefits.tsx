@@ -49,9 +49,9 @@ const Benefits: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="p-8 border border-white/5 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors duration-500 group"
+                className="p-8 border border-white/5 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors duration-200 group"
             >
-                <div className="text-[#bf953f] mb-6 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
+                <div className="text-[#bf953f] mb-6 group-hover:scale-105 transition-transform duration-200">{item.icon}</div>
                 <h3 className="text-xl font-bold text-white mb-4">{item.title}</h3>
                 <p className="text-neutral-400 text-sm font-light leading-relaxed">{item.desc}</p>
             </motion.div>

@@ -10,7 +10,7 @@ const Videos: React.FC = () => {
             <h2 className="text-4xl md:text-6xl font-bold text-white tracking-tight">
                 VISUAL <span className="text-neutral-700">DIARIES</span>
             </h2>
-            <a href="#" className="hidden md:inline-block text-xs font-mono text-[#bf953f] border-b border-[#bf953f] pb-1 uppercase tracking-widest hover:text-white hover:border-white transition-all">
+            <a href="#" className="hidden md:inline-block text-xs font-mono text-[#bf953f] border-b border-[#bf953f] pb-1 uppercase tracking-widest hover:text-white hover:border-white transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                 View Youtube Channel
             </a>
         </div>
@@ -18,13 +18,18 @@ const Videos: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-900 border border-neutral-900">
             {/* Main Video */}
             <motion.div 
-                whileHover={{ opacity: 0.8 }}
+                whileHover={{ opacity: 0.9 }}
+                transition={{ duration: 0.2 }}
                 className="col-span-1 md:col-span-2 relative aspect-video bg-[#0a0a0a] group cursor-pointer overflow-hidden"
+                role="button"
+                tabIndex={0}
+                aria-label="Play Live at Frankie's Jazz Quartet 2024"
             >
                  <img 
                     src="https://images.unsplash.com/photo-1533174072545-e8d4aa97edf9?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Main Performance"
-                    className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 transition-transform duration-700"
+                    alt="Live performance at Frankie's Jazz Club"
+                    loading="lazy"
+                    className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 transition-transform duration-300"
                  />
                  <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-300">
@@ -38,11 +43,12 @@ const Videos: React.FC = () => {
             </motion.div>
 
             {/* Secondary 1 */}
-            <div className="relative aspect-video bg-[#0a0a0a] group cursor-pointer overflow-hidden">
+            <div className="relative aspect-video bg-[#0a0a0a] group cursor-pointer overflow-hidden" role="button" tabIndex={0} aria-label="Play Studio Session">
                 <img 
                     src="https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=1558&auto=format&fit=crop" 
-                    alt="Studio"
-                    className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 transition-transform duration-700"
+                    alt="Studio recording session"
+                    loading="lazy"
+                    className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 transition-transform duration-300"
                  />
                  <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:bg-[#bf953f] group-hover:border-[#bf953f] transition-all duration-300">
@@ -55,11 +61,12 @@ const Videos: React.FC = () => {
             </div>
 
             {/* Secondary 2 */}
-            <div className="relative aspect-video bg-[#0a0a0a] group cursor-pointer overflow-hidden">
+            <div className="relative aspect-video bg-[#0a0a0a] group cursor-pointer overflow-hidden" role="button" tabIndex={0} aria-label="Play Transcription Breakdown">
                 <img 
                     src="https://images.unsplash.com/photo-1544785316-6e58aed68a50?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Solo"
-                    className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 transition-transform duration-700"
+                    alt="Transcription breakdown video"
+                    loading="lazy"
+                    className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 transition-transform duration-300"
                  />
                  <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:bg-[#bf953f] group-hover:border-[#bf953f] transition-all duration-300">
@@ -73,7 +80,7 @@ const Videos: React.FC = () => {
         </div>
         
         <div className="mt-8 text-center md:hidden">
-            <a href="#" className="text-xs font-mono text-[#bf953f] border-b border-[#bf953f] pb-1 uppercase tracking-widest">
+            <a href="#" className="text-xs font-mono text-[#bf953f] border-b border-[#bf953f] pb-1 pt-3 uppercase tracking-widest cursor-pointer inline-block min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-black">
                 View Youtube Channel
             </a>
         </div>
