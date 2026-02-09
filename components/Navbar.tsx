@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +29,18 @@ const Navbar: React.FC = () => {
 
   const scrollToSection = (sectionId: string) => {
     setIsMenuOpen(false);
+    
+    // "Get In Touch" navigates to /contact page
+    if (sectionId === 'contact') {
+      navigate('/contact');
+      return;
+    }
+
+    // If we're not on the home page, navigate home first
+    if (location.pathname !== '/') {
+      navigate('/');
+      return;
+    }
     
     if (sectionId === 'home') {
       window.scrollTo({ top: 0, behavior: 'smooth' });

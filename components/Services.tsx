@@ -33,7 +33,7 @@ const Services: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="services" className="py-20 sm:py-32 bg-[#050505] relative overflow-hidden" aria-labelledby="services-heading">
+    <section id="services" className="pt-28 sm:pt-40 pb-20 sm:pb-32 bg-[#050505] relative overflow-hidden" aria-labelledby="services-heading">
       <div className="container mx-auto px-6 relative z-10">
         <motion.h2 
           id="services-heading" 

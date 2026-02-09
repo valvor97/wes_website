@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Instagram } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -59,9 +61,9 @@ const Hero: React.FC = () => {
             {/* Text Content - order-2 on mobile/tablet so image shows first */}
             <div className="w-full lg:w-1/2 order-2 lg:order-1">
               <div className="py-4">
-                <h2 className="text-4xl sm:text-6xl lg:text-8xl font-bold text-white mb-6 leading-[0.9] tracking-tight">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-6 leading-[0.9] tracking-tight">
                   LEGACY <br/>
-                  <span className="text-gradient-gold italic pr-4">IN EVERY</span> <br/>
+                  <span className="text-gradient-gold italic pr-4 whitespace-nowrap">IN EVERY</span> <br/>
                   STROKE.
                 </h2>
               </div>
@@ -70,13 +72,40 @@ const Hero: React.FC = () => {
                  <p className="text-base sm:text-lg md:text-xl text-neutral-400 font-light leading-relaxed max-w-md">
 A third-generation musician and drummer with Hall of Fame roots. Merging jazz tradition with modern precision for events that leave a mark.
                  </p>
-                 <a 
-                  href="#contact"
-                  aria-label="Start the conversation - go to contact section"
-                  className="mt-8 inline-flex items-center gap-2 min-h-[44px] min-w-[44px] cursor-pointer text-[#bf953f] uppercase tracking-widest text-xs sm:text-sm font-bold hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] group"
-                >
-                  <span className="border-b border-[#bf953f] pb-px group-hover:border-white">Start The Conversation</span>
-                </a>
+                 <div className="mt-8 flex flex-col items-start gap-4">
+                  <motion.a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    animate={{
+                      backgroundColor: ['rgba(38, 38, 38, 0)', 'rgba(191, 149, 63, 0.1)', 'rgba(38, 38, 38, 0)'],
+                      borderColor: ['#262626', '#bf953f', '#262626'],
+                      color: ['#525252', '#bf953f', '#525252']
+                    }}
+                    transition={{
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: 'easeInOut'
+                    }}
+                    whileHover={{ 
+                      backgroundColor: 'rgba(191, 149, 63, 0.2)',
+                      borderColor: '#bf953f',
+                      color: '#bf953f',
+                      scale: 1.1
+                    }}
+                    className="w-10 h-10 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full border transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]"
+                    aria-label="Follow Wesley Anderson on Instagram"
+                  >
+                    <Instagram className="w-5 h-5" />
+                  </motion.a>
+                  <Link 
+                    to="/contact"
+                    aria-label="Get in touch - go to contact page"
+                    className="inline-flex items-center gap-2 min-h-[44px] min-w-[44px] cursor-pointer text-[#bf953f] uppercase tracking-widest text-xs sm:text-sm font-bold hover:text-white transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] group"
+                  >
+                    <span className="border-b border-[#bf953f] pb-px group-hover:border-white">Get In Touch</span>
+                  </Link>
+                 </div>
               </div>
             </div>
 

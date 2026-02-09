@@ -50,12 +50,12 @@ const Videos: React.FC = () => {
                         className="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-80 transition-opacity duration-300"
                     />
                 </motion.div>
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
                     <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:bg-[#bf953f] group-hover:border-[#bf953f] transition-all duration-300">
                         <Play className="w-8 h-8 text-white ml-1 group-hover:fill-black group-hover:text-black transition-colors" />
                     </div>
                 </div>
-                <div className="absolute bottom-0 left-0 p-6 sm:p-8 w-full bg-gradient-to-t from-black to-transparent pointer-events-none">
+                <div className="absolute bottom-0 left-0 p-6 sm:p-8 w-full bg-gradient-to-t from-black to-transparent pointer-events-none z-0">
                     <h3 className="text-xl sm:text-3xl font-bold text-white mb-2 font-syne">Strange Fellow - Reaper</h3>
                     <p className="font-mono text-[#bf953f] text-xs">MUSIC VIDEO</p>
                 </div>
@@ -77,36 +77,43 @@ const Videos: React.FC = () => {
                     height={360}
                     className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 transition-transform duration-300"
                  />
-                 <div className="absolute inset-0 flex items-center justify-center">
+                 <div className="absolute inset-0 flex items-center justify-center z-10">
                     <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:bg-[#bf953f] group-hover:border-[#bf953f] transition-all duration-300">
                         <Play className="w-6 h-6 text-white ml-1 group-hover:fill-black group-hover:text-black transition-colors" />
                     </div>
                  </div>
-                 <div className="absolute bottom-6 left-6">
+                 <div className="absolute bottom-6 left-6 z-0">
                     <h3 className="text-base sm:text-xl font-bold text-white">Adam Cebula - Many Nights</h3>
-                    <p className="font-mono text-[#bf953f] text-xs mt-1">STUDIO WORK</p>
+                    <p className="font-mono text-[#bf953f] text-xs mt-1">STUDIO SESSION</p>
                  </div>
             </a>
 
             {/* Secondary 2 */}
-            <div className="relative aspect-video bg-[#0a0a0a] group cursor-pointer overflow-hidden min-h-[44px]" role="button" tabIndex={0} aria-label="Transcription Breakdown - upcoming video">
+            <a
+                href="https://www.youtube.com/watch?v=7pbOrx1kfYc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative aspect-video bg-[#0a0a0a] group cursor-pointer overflow-hidden block"
+                aria-label="Watch video on YouTube"
+            >
                 <img 
-                    src="https://images.unsplash.com/photo-1544785316-6e58aed68a50?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Drum transcription breakdown, Wesley Anderson"
+                    src="https://img.youtube.com/vi/7pbOrx1kfYc/maxresdefault.jpg" 
+                    alt="Wesley Anderson drumming performance"
                     loading="lazy"
                     width={640}
                     height={360}
                     className="w-full h-full object-cover grayscale opacity-60 group-hover:scale-105 transition-transform duration-300"
                  />
-                 <div className="absolute inset-0 flex items-center justify-center">
+                 <div className="absolute inset-0 flex items-center justify-center z-10">
                     <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:bg-[#bf953f] group-hover:border-[#bf953f] transition-all duration-300">
                         <Play className="w-6 h-6 text-white ml-1 group-hover:fill-black group-hover:text-black transition-colors" />
                     </div>
                  </div>
-                 <div className="absolute bottom-6 left-6">
-                    <h3 className="text-base sm:text-xl font-bold text-white">Transcription Breakdown</h3>
+                 <div className="absolute bottom-6 left-6 z-0">
+                    <h3 className="text-base sm:text-xl font-bold text-white">AMF - Tell Me Something Good</h3>
+                    <p className="font-mono text-[#bf953f] text-xs mt-1">STUDIO SESSION</p>
                  </div>
-            </div>
+            </a>
         </motion.div>
         
         <div className="mt-8 text-center md:hidden">

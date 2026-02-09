@@ -10,7 +10,7 @@ const stats = [
 
 const Benefits: React.FC = () => {
   return (
-    <section id="benefits" className="pt-28 sm:pt-40 pb-20 sm:pb-32 bg-[#050505] relative" aria-labelledby="benefits-heading">
+    <section id="benefits" className="py-20 sm:py-32 bg-[#050505] relative" aria-labelledby="benefits-heading">
       <div className="container mx-auto px-6">
         
         <motion.div 

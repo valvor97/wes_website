@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Instagram, Youtube, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -18,7 +19,7 @@ const Footer: React.FC = () => {
                     <a href="#videos" className="hover:text-[#bf953f] transition-colors duration-200 cursor-pointer py-2 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]">PORTFOLIO</a>
                     <a href="#process" className="hover:text-[#bf953f] transition-colors duration-200 cursor-pointer py-2 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]">PROCESS</a>
                     <a href="#testimonials" className="hover:text-[#bf953f] transition-colors duration-200 cursor-pointer py-2 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]">TESTIMONIALS</a>
-                    <a href="#contact" className="hover:text-[#bf953f] transition-colors duration-200 cursor-pointer py-2 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]">CONTACT</a>
+                    <Link to="/contact" className="hover:text-[#bf953f] transition-colors duration-200 cursor-pointer py-2 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]">CONTACT</Link>
                 </div>
             </div>
 
