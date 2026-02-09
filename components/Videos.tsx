@@ -16,8 +16,8 @@ const Videos: React.FC = () => {
             <h2 id="videos-heading" className="text-3xl sm:text-4xl md:text-6xl font-bold text-white tracking-tight">
                 VISUAL <span className="text-neutral-700">DIARIES</span>
             </h2>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="hidden md:inline-block text-xs font-mono text-[#bf953f] uppercase tracking-widest hover:text-white transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-black min-h-[44px] inline-flex items-center group" aria-label="View Wesley Anderson YouTube channel">
-                <span className="border-b border-[#bf953f] pb-px group-hover:border-white">View Youtube Channel</span>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="hidden md:inline-block text-xs font-mono text-[#bf953f] uppercase tracking-widest hover:text-white transition-colors duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-black min-h-[44px] inline-flex items-center group" aria-label="View full portfolio on YouTube">
+                <span className="border-b border-[#bf953f] pb-px group-hover:border-white">View Full Portfolio</span>
             </a>
         </motion.div>
 
@@ -110,8 +110,8 @@ const Videos: React.FC = () => {
         </motion.div>
         
         <div className="mt-8 text-center md:hidden">
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-[#bf953f] pt-3 uppercase tracking-widest cursor-pointer inline-flex items-center min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-black group" aria-label="View Wesley Anderson YouTube channel">
-                <span className="border-b border-[#bf953f] pb-px group-hover:border-white">View Youtube Channel</span>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-[#bf953f] pt-3 uppercase tracking-widest cursor-pointer inline-flex items-center min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#bf953f] focus-visible:ring-offset-2 focus-visible:ring-offset-black group" aria-label="View full portfolio on YouTube">
+                <span className="border-b border-[#bf953f] pb-px group-hover:border-white">View Full Portfolio</span>
             </a>
         </div>
       </div>
