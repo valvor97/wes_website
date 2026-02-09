@@ -6,7 +6,7 @@ const About: React.FC = () => {
     <section id="about" className="py-20 sm:py-40 bg-[#050505] relative overflow-hidden" aria-labelledby="about-heading">
       {/* Background typographic decoration */}
       <div className="absolute top-20 right-0 text-[20vw] font-bold text-white/[0.02] leading-none pointer-events-none select-none font-syne">
-        STORY
+        TRADITION
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

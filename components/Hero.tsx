@@ -77,6 +77,11 @@ A third-generation musician and drummer with Hall of Fame roots. Merging jazz tr
                     href="https://www.instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
+                    initial={{
+                      backgroundColor: 'rgba(38, 38, 38, 0)',
+                      borderColor: '#262626',
+                      color: '#525252'
+                    }}
                     animate={{
                       backgroundColor: ['rgba(38, 38, 38, 0)', 'rgba(191, 149, 63, 0.1)', 'rgba(38, 38, 38, 0)'],
                       borderColor: ['#262626', '#bf953f', '#262626'],
@@ -85,7 +90,8 @@ A third-generation musician and drummer with Hall of Fame roots. Merging jazz tr
                     transition={{
                       duration: 5,
                       repeat: Infinity,
-                      ease: 'easeInOut'
+                      ease: 'easeInOut',
+                      delay: 2
                     }}
                     whileHover={{ 
                       backgroundColor: 'rgba(191, 149, 63, 0.2)',

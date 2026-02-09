@@ -26,9 +26,9 @@ const Home: React.FC = () => {
         <Logos />
         <Services />
         <Benefits />
+        <Videos />
         <Gigs />
         <About />
-        <Videos />
         <Process />
         <Testimonials />
         <Contact />

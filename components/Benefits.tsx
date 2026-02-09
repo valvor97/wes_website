@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Music, Layers, User } from 'lucide-react';
+import { Music, Layers, User } from 'lucide-react';
 
 const stats = [
   { label: "Years Active", value: "13+" },
@@ -42,10 +42,9 @@ const Benefits: React.FC = () => {
         </motion.div>
 
         {/* Glass Grid - equal height cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 [&>*]:min-h-0 sm:[&>*]:min-h-[240px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 [&>*]:min-h-0 sm:[&>*]:min-h-[240px]">
           {[
-            { title: "Pocket", icon: <Zap/>, desc: "When Wes locks in, every heart finds the beat." },
-            { title: "Groove", icon: <Music/>, desc: "Steady, deep and makes the whole floor feel it." },
+            { title: "Pocket", icon: <Music/>, desc: "When Wes locks in, every heart finds the beat." },
             { title: "Range", icon: <Layers/>, desc: "Jazz, rock, country, pop, fusion, folk." },
             { title: "Style", icon: <User/>, desc: "From sharp chops to fine shoes, Wes brings his best to every gig." }
           ].map((item, i) => (
@@ -59,7 +58,7 @@ const Benefits: React.FC = () => {
             >
                 <div className="glow-card-inner p-6 md:p-8 h-full flex flex-col group">
                     <div className="text-[#bf953f] mb-4 md:mb-6">{item.icon}</div>
-                    <h3 className="text-xl font-bold text-white mb-3 md:mb-4">{item.title}</h3>
+                    <h3 className="text-xl font-bold text-white mb-3 md:mb-4 leading-normal pb-1">{item.title}</h3>
                     <p className="text-neutral-400 text-sm sm:text-base font-light leading-relaxed">{item.desc}</p>
                 </div>
             </motion.div>
